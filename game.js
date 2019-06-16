@@ -70,10 +70,12 @@ class Player{
     }
     moveTowards(tX, tY){
         let dist = d(this.x, this.y, tX, tY);
-        let dx = (tX-this.x)/dist*this.speed;
-        let dy = (tY-this.y)/dist*this.speed;
-        this.x += dx;
-        this.y += dy;
+        if (dist >= this.speed){
+            let dx = (tX-this.x)/dist*this.speed;
+            let dy = (tY-this.y)/dist*this.speed;
+            this.x += dx;
+            this.y += dy;
+        }
     }
     hit(dmg){
         this.hp -= dmg;
