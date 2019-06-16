@@ -186,7 +186,7 @@ class Bullet{
         let dist = d(x, y, tX, tY);
         this.dx = (tX-x)/dist*this.speed;
         this.dy = (tY-y)/dist*this.speed;
-        this.dmg = 5;
+        this.dmg = 1;
     }
     update(){
         this.x += this.dx;
