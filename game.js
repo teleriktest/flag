@@ -125,14 +125,14 @@ class Player{
 
 class PlayerHuman extends Player{
     ai(){
-        if (isKeyPressed[87] && isKeyPressed[65]) this.moveTowards(this.x - 1, this.y-1); 
-        else if (isKeyPressed[87] && isKeyPressed[68]) this.moveTowards(this.x + 1, this.y-1); 
-        else if (isKeyPressed[83] && isKeyPressed[65]) this.moveTowards(this.x - 1, this.y+1); 
-        else if (isKeyPressed[83] && isKeyPressed[68]) this.moveTowards(this.x + 1, this.y+1); 
-        else if (isKeyPressed[65]) this.moveTowards(this.x - 1, this.y); 
-        else if (isKeyPressed[87]) this.moveTowards(this.x, this.y-1); 
-        else if (isKeyPressed[68]) this.moveTowards(this.x+1, this.y); 
-        else if (isKeyPressed[83]) this.moveTowards(this.x, this.y+1);
+        if (isKeyPressed[87] && isKeyPressed[65]) this.moveTowards(this.x - 100, this.y-100); 
+        else if (isKeyPressed[87] && isKeyPressed[68]) this.moveTowards(this.x + 100, this.y-100); 
+        else if (isKeyPressed[83] && isKeyPressed[65]) this.moveTowards(this.x - 100, this.y+100); 
+        else if (isKeyPressed[83] && isKeyPressed[68]) this.moveTowards(this.x + 100, this.y+100); 
+        else if (isKeyPressed[65]) this.moveTowards(this.x - 100, this.y); 
+        else if (isKeyPressed[87]) this.moveTowards(this.x, this.y-100); 
+        else if (isKeyPressed[68]) this.moveTowards(this.x+100, this.y); 
+        else if (isKeyPressed[83]) this.moveTowards(this.x, this.y+100);
         if (isMousePressed) this.shoot(mouseX, mouseY);
     }
 }
